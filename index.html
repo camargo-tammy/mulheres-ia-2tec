@@ -1,57 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mulheres da Tecnologia</title>
+    <title>Mulheres na Tecnologia | Pioneiras</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
 
     <header class="cabecalho">
         <div class="logo-area">
             <i class="fa-solid fa-venus icon-feminismo"></i>
-            <h1 id="titulo">Mulheres da Tecnologia</h1>
-            <i class="fa-solid fa-code icon-tech"></i>
+            <h1 id="titulo">Mulheres na Tecnologia</h1>
+            <i class="fa-solid fa-wand-magic-sparkles icon-tech"></i>
         </div>
-        <p class="subtitulo-header">Pioneiras que transformaram a história da computação</p>
+        <p class="frase-cursiva-topo">"Lugar de mulher é onde ela quiser, inclusive no código."</p>
     </header>
 
     <main class="card-principal">
-        <div class="banner-intro">
-            <h2><i class="fa-solid fa-sparkles"></i> Conheça as Pioneiras</h2>
-            <p class="intro-texto">Explore a trajetória das mulheres incríveis que criaram os primeiros algoritmos, linguagens de programação e softwares de missão espacial.</p>
-        </div>
+        
+        <!-- Carrossel / Frases de Empoderamento em Destaque -->
+        <section class="quote-box">
+            <i class="fa-solid fa-quote-left icon-quote"></i>
+            <p class="frase-empoderada">O futuro da tecnologia também se escreve no feminino.</p>
+            <span class="subtext-quote">Pioneiras que transformaram a história e abriram caminhos.</span>
+        </section>
 
+        <!-- Menu com Cards Interativos -->
         <nav class="menu">
             <ul>
                 <li>
-                    <a href="ada.html">
-                        <i class="fa-solid fa-laptop-code"></i>
-                        <span>Ada Lovelace</span>
+                    <a href="ada.html" class="nav-card">
+                        <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="card-info">
+                            <h3>Ada Lovelace</h3>
+                            <p>A Primeira Programadora</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="grace.html">
-                        <i class="fa-solid fa-bug"></i>
-                        <span>Grace Hopper</span>
+                    <a href="grace.html" class="nav-card">
+                        <div class="icon-box"><i class="fa-solid fa-bug"></i></div>
+                        <div class="card-info">
+                            <h3>Grace Hopper</h3>
+                            <p>Rainha da Computação</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="margareth.html">
-                        <i class="fa-solid fa-rocket"></i>
-                        <span>Margaret Hamilton</span>
+                    <a href="margareth.html" class="nav-card">
+                        <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="card-info">
+                            <h3>Margaret Hamilton</h3>
+                            <p>Pioneira dos Software Espaciais</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="dorothy.html">
-                        <i class="fa-solid fa-user-astronaut"></i>
-                        <span>Dorothy Vaughan</span>
+                    <a href="dorothy.html" class="nav-card">
+                        <div class="icon-box"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div class="card-info">
+                            <h3>Dorothy Vaughan</h3>
+                            <p>Líder e Mente da NASA</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
                     </a>
                 </li>
             </ul>
@@ -59,11 +80,10 @@
     </main>
 
     <footer>
-        <p>
-            <b>Desenvolvido por:</b> <i>Tamirys Hariadny Camargo Couto</i> <br>
-            <b>Contato:</b> <i>thcc_@gmail.com | (43) 9999-9999</i> <br>
-            <i class="fa-solid fa-location-dot"></i> <i>Manoel Ribas - Paraná</i> 
-        </p>
+        <div class="footer-content">
+            <p><b>Desenvolvido por:</b> <i>Tamirys Hariadny Camargo Couto</i></p>
+            <p><i class="fa-solid fa-location-dot"></i> <i>Manoel Ribas - PR</i> | <b>Contato:</b> <i>thcc_@gmail.com</i></p>
+        </div>
     </footer>
 
 </body>
