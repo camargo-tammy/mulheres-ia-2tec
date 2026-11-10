@@ -1,6 +1,15 @@
 /* ==========================================
-   RESET E ESTILOS GERAIS DE BASE
+   VARIAVEIS DE CORES E BASE
    ========================================== */
+:root {
+    --primary: #8b5cf6;
+    --primary-hover: #7c3aed;
+    --secondary: #ec4899;
+    --bg-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-color: #1e1b4b;
+    --footer-bg: #0f172a;
+}
 
 * {
     box-sizing: border-box;
@@ -9,202 +18,255 @@
 }
 
 body { 
-    background-color: #86b2f3;
-    font-family: Arial, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    color: #0e0b27;
+    color: var(--text-color);
     line-height: 1.6;
-    padding-bottom: 110px; /* Garante que o rodapé fixo não cubra o conteúdo */
+    min-height: 100vh;
+    padding-bottom: 120px;
 }
 
 /* ==========================================
-   CABEÇALHO
+   CABEÇALHO COM SÍMBOLOS
    ========================================== */
 
 .cabecalho {
-    background-color: #c7d5ec;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
     color: #ffffff;
-    padding: 20px 15px;
-    font-size: 22px;
+    padding: 25px 20px;
     text-align: center;
+    border-bottom: 2px solid rgba(236, 72, 153, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo-area {
     display: flex;
-    justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-feminismo {
+    font-size: 32px;
+    color: #ec4899;
+    filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.8));
+}
+
+.icon-tech {
+    font-size: 28px;
+    color: #38bdf8;
 }
 
 #titulo {
-    color: #1e293b;
+    color: #ffffff;
     font-size: 32px;
-    text-align: center;
-    font-weight: bold;
-    word-break: break-word;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(168, 85, 247, 0.5);
+}
+
+.subtitulo-header {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 300;
 }
 
 /* ==========================================
-   CONTEÚDO PRINCIPAL (CARTÃO CENTRAL)
+   CARTÃO PRINCIPAL E CONTEÚDO
    ========================================== */
 
 main {
-    max-width: 800px;
+    max-width: 850px;
     width: 90%;
-    margin: 30px auto;
-    padding: 25px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 35px auto;
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.banner-intro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.banner-intro h2 {
+    color: #6d28d9;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.intro-texto {
+    font-size: 15px;
+    color: #475569;
+    text-align: center !important;
 }
 
 p {
     margin: 15px 0;
     text-align: justify;
     line-height: 1.8;
+    color: #334155;
 }
 
-/* Imagem Central Responsiva */
+/* Imagens das Cientistas */
 .imgcentro {
     display: block;
-    margin: 20px auto;
+    margin: 25px auto;
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    aspect-ratio: 6/7;
+    max-width: 280px;
+    height: 330px;
     object-fit: cover; 
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    border-radius: 16px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
 }
 
 .imgcentro:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(236, 72, 153, 0.4);
 }
 
 /* ==========================================
-   MENU DE NAVEGAÇÃO E BOTÕES
+   MENU DE NAVEGAÇÃO MODERNO (BOTOES ESTILIZADOS)
    ========================================== */
 
 .menu {
-    text-align: center;
-    margin: 30px auto 10px auto;
+    margin: 25px auto 10px auto;
     width: 100%;
 }
 
 .menu ul {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
     list-style: none;
-}
-
-.menu li {
-    display: block;
-    width: 100%;
-    max-width: 250px;
+    padding: 0;
 }
 
 .menu li a {
-    display: block;
-    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
     color: #ffffff;
-    background-color: #6366f1;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 20px 15px;
+    border-radius: 14px;
     text-decoration: none;
     font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    transition: all 0.3s ease;
+}
+
+.menu li a i {
+    font-size: 26px;
+    color: #f472b6;
 }
 
 .menu li a:hover {
-    background-color: #4338ca;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
 }
 
+/* Botão Voltar */
 .btn-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
-button, .btn-voltar {
-    display: inline-block;
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 16px;
     color: #ffffff;
-    background-color: #6366f1;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
     border: none;
-    padding: 12px 30px;
-    border-radius: 6px;
+    padding: 12px 28px;
+    border-radius: 30px;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+    transition: all 0.3s ease;
 }
 
-button:hover, .btn-voltar:hover {
-    background-color: #4338ca;
+.btn-voltar:hover {
+    background: linear-gradient(135deg, #ec4899, #7c3aed);
     transform: translateY(-2px);
 }
 
 /* ==========================================
-   RODAPÉ CENTRALIZADO
+   RODAPÉ CENTRALIZADO E ELEGANTE
    ========================================== */
 
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #1e293b;
-    color: #ffffff;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    color: #f8fafc;
     font-size: 14px;
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 15px;
     text-align: center;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
 }
 
 footer p {
     margin: 0;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.5;
+    color: #e2e8f0;
+}
+
+footer b {
+    color: #f472b6;
 }
 
 /* ==========================================
-   RESPONSIVIDADE (CELULARES E TABLETS PEQUENOS)
+   RESPONSIVIDADE (CELULARES)
    ========================================== */
 
 @media screen and (max-width: 600px) {
     #titulo {
-        font-size: 24px;
+        font-size: 22px;
+    }
+
+    .icon-feminismo, .icon-tech {
+        font-size: 22px;
     }
 
     main {
-        width: 95%;
-        padding: 15px;
-        margin: 15px auto;
+        width: 92%;
+        padding: 20px 15px;
+        margin: 20px auto;
     }
 
     p {
         font-size: 15px;
         text-align: left;
-        margin: 12px 0;
     }
 
     .menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu li {
-        max-width: 100%;
+        grid-template-columns: 1fr;
     }
 
     footer {
         font-size: 12px;
-        padding: 8px 10px;
-    }
-
-    body {
-        padding-bottom: 120px;
+        padding: 10px 8px;
     }
 }
