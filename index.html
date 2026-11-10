@@ -21,11 +21,38 @@
             <i class="fa-solid fa-wand-magic-sparkles icon-tech"></i>
         </div>
         <p class="frase-cursiva-topo">"Lugar de mulher é onde ela quiser, inclusive no código."</p>
+
+        <!-- Letreiro com Frases Animadas -->
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span>✨ Lugar de mulher é onde ela quiser, inclusive no código! ✨</span>
+                <span>🚀 O futuro da tecnologia se escreve no feminino. 🚀</span>
+                <span>💻 Ciência, inovação e empoderamento transformam o mundo. 💻</span>
+                <span>👑 Quebrando barreiras e criando o amanhã. 👑</span>
+            </div>
+        </div>
     </header>
 
     <main class="card-principal">
         
-        <!-- Carrossel / Frases de Empoderamento em Destaque -->
+        <!-- Objetos Interativos -->
+        <section class="objetos-interativos">
+            <h3 class="subtitulo-cursiva">Inspiração Interativa</h3>
+            <div class="cards-interativos">
+                <div class="card-item" onclick="gerarFrase()">
+                    <i class="fa-solid fa-lightbulb icon-card"></i>
+                    <h4>Frase do Dia</h4>
+                    <p id="texto-frase">Clique para gerar uma frase de apoio!</p>
+                </div>
+                <div class="card-item" onclick="soltarBrilhos(event)">
+                    <i class="fa-solid fa-wand-magic-sparkles icon-card"></i>
+                    <h4>Empoderamento</h4>
+                    <p>Clique aqui para ativar o brilho neon!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frases de Empoderamento em Destaque -->
         <section class="quote-box">
             <i class="fa-solid fa-quote-left icon-quote"></i>
             <p class="frase-empoderada">O futuro da tecnologia também se escreve no feminino.</p>

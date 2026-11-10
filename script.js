@@ -48,3 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('tema', isLight ? 'light' : 'dark');
     });
 });
+// Gerador de Frases Motivacionais ao Clicar
+const frases = [
+    '"Nunca aceite limitações impostas pelos outros." — Mae Jemison',
+    '"A programação é a linguagem da inovação feminina."',
+    '"Seja a garota que decidiu ir em frente!"',
+    '"Mulheres inteligentes criam futuros brilhantes."'
+];
+
+function gerarFrase() {
+    const elemento = document.getElementById('texto-frase');
+    const index = Math.floor(Math.random() * frases.length);
+    elemento.innerText = frases[index];
+    elemento.style.color = '#06b6d4';
+}
+
+// Efeito de partículas/brilhos ao clicar
+function soltarBrilhos(event) {
+    const card = event.currentTarget;
+    card.style.boxShadow = '0 0 35px #ec4899';
+    setTimeout(() => {
+        card.style.boxShadow = '';
+    }, 800);
+}
