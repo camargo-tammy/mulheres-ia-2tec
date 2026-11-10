@@ -284,3 +284,78 @@ footer i { color: var(--cyan-neon); }
     .frase-empoderada { font-size: 26px; }
     main { padding: 20px 15px; }
 }
+/* ==========================================
+   MODO CLARO (LIGHT MODE) E BOTÃO DE TEMA
+   ========================================== */
+
+/* Botão Flutuante de Tema */
+#btn-tema {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink-neon), var(--purple-main));
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+    transition: all 0.3s ease;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-tema:hover {
+    transform: scale(1.15) rotate(15deg);
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.8);
+}
+
+/* Alterações de cores quando o Light Mode estiver ativo */
+body.light-mode {
+    background: #f1f5f9;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 40%);
+    color: #0f172a;
+}
+
+body.light-mode .cabecalho {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+body.light-mode main {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .hero-section h2,
+body.light-mode .card-info h3,
+body.light-mode .bio-texto p,
+body.light-mode p {
+    color: #1e293b;
+}
+
+body.light-mode .nav-card {
+    background: rgba(241, 245, 249, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .nav-card:hover {
+    background: #ffffff;
+}
+
+body.light-mode .frase-empoderada {
+    color: #0f172a;
+}
+
+body.light-mode footer {
+    background: rgba(255, 255, 255, 0.95);
+    color: #475569;
+    border-top: 1px solid rgba(236, 72, 153, 0.2);
+}
